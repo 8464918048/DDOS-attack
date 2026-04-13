@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg: #E4E3E0;
+  --color-ink: #141414;
+  --color-safe: #10b981; /* Emerald-500 */
+  --color-danger: #dc2626; /* Red-600 */
+
+  --shadow-brutal: 8px 8px 0px 0px rgba(20, 20, 20, 1);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif italic font-bold;
+  }
+
+  code, pre {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  .brutal-card {
+    @apply bg-white border-2 border-ink shadow-brutal p-6;
+  }
+
+  .brutal-btn {
+    @apply border-2 border-ink px-4 py-2 font-bold transition-all active:translate-x-1 active:translate-y-1 active:shadow-none shadow-[4px_4px_0px_0px_rgba(20,20,20,1)];
+  }
+
+  .brutal-btn-primary {
+    @apply border-2 border-ink px-4 py-2 font-bold transition-all active:translate-x-1 active:translate-y-1 active:shadow-none shadow-[4px_4px_0px_0px_rgba(20,20,20,1)] bg-ink text-white;
+    &:hover {
+      @apply opacity-90;
+    }
+  }
+
+  .brutal-btn-danger {
+    @apply border-2 border-ink px-4 py-2 font-bold transition-all active:translate-x-1 active:translate-y-1 active:shadow-none shadow-[4px_4px_0px_0px_rgba(20,20,20,1)] bg-danger text-white;
+    &:hover {
+      @apply opacity-90;
+    }
+  }
+}

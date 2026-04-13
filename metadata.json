@@ -1,0 +1,5 @@
+{
+  "name": "DDOS Attack",
+  "description": "A high-fidelity, real-time DDoS detection and prevention simulator demonstrating Random Forest-based machine learning traffic analysis.",
+  "requestFramePermissions": []
+}
